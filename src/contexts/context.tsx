@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState, useReducer } from "react";
+import { ReactNode, createContext, useState, useReducer, useEffect } from "react";
 import { FormInfosProps } from "../pages/checkout/components/orderForm/orderForm";
 import uuid from "react-uuid";
 import { toast } from "react-toastify";
@@ -113,27 +113,24 @@ export function ContextProvider({ children }: ContextProviderProps) {
     const [ orderState, dispatch ] = useReducer(reducer, {
         cartItems: [],
         orders: []
+    }, 
+    (initialState) => {
+        const storedStateAsJSON = localStorage.getItem(
+            '@coffee-delivery:orders-1.0.0'
+        )
+
+        if (storedStateAsJSON) {
+            return JSON.parse(storedStateAsJSON)
+        }
+
+        return initialState
     })
 
-    
-    //     },
-    //     // () => {
-    //     //     const storedStateAsJSON = localStorage.getItem('@coffee-delivery/orders')
-        
-    //     //     if (storedStateAsJSON) {
-    //     //         return JSON.parse(storedStateAsJSON)
-    //     //     }
-        
-    //     //     return {
-    //     //         orders: [],
-    //     //         currentOrder: {
-    //     //         cart: [],
-    //     //         totalPrice: 0,
-    //     //         deliveryPrice: 0,
-    //     //         productsPrice: 0,
-    //     //     }}
-    //     // }
-    // )
+    useEffect(() => {
+        const stateJSON = JSON.stringify(orderState)
+
+        localStorage.setItem('@coffee-delivery:orders-1.0.0', stateJSON)
+    }, [orderState])
 
     const addItemToCart = (coffee: CartItemType) => {
         dispatch({
