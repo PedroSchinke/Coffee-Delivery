@@ -29,6 +29,7 @@
 
 <br>
 
+- `Styled Components` para a criação de componentes estilizados
 - `React Hook Form` para registrar dados de formulários
 - `Zod` para a validação de formulários
 - `useReducer` para lidar com mudanças de estados
@@ -44,6 +45,7 @@
 
 - React.js
 - Typescript
+- Styled Components
 - React Hook Form
 - Zod Resolver
 - React Icons
