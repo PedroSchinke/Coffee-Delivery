@@ -14,7 +14,7 @@ export function OrderHistory() {
 
             {orders.length === 0 ? <NoOrders /> : 
                 <>
-                    <h1>Histórico</h1>
+                    <h1>Histórico de Pedidos</h1>
 
                     <OrdersSection>
 

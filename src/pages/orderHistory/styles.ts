@@ -20,8 +20,10 @@ export const OrderHistoryContainer = styled.section`
 `
 
 export const OrdersSection = styled.div `
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, max-content));
     gap: 10px;
+    row-gap: 30px;
 
     @media (max-width: 768px) {
         display: grid;
