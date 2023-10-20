@@ -13,6 +13,7 @@ export const OrderContainer = styled.div`
 `
 
 export const OrderInfos = styled.div`
+    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -22,15 +23,22 @@ export const OrderInfos = styled.div`
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
     color: ${props => props.theme['base-subtitle']};
+
+    @media (max-width: 768px) {
+        max-width: 100%;
+        width: 100%;
+    }
 `
 
 export const OrderItensContainer = styled.div`
     width: 100%;
-    height: 180px;
+    height: fit-content;
+    min-height: 180px;
     display: flex;
 
     @media (max-width: 768px) {
         height: fit-content;
+        min-height: 0;
     }
 
     ul {

@@ -25,7 +25,7 @@ export const OrdersSection = styled.div `
 
     @media (max-width: 768px) {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(1, 1fr);
         gap: 30px;
     }
 `
