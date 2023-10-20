@@ -37,8 +37,6 @@ type Actions = {
 
 interface ContextType {
     cartItems: CartItemType[]
-    cartItemsCount: number
-    setCartItemsCount: (value: number) => void
     orderInfos: FormInfosProps | null
     setOrderInfos: (value: FormInfosProps | null) => void
     addOrderInfos: (data: FormInfosProps) => void
@@ -161,8 +159,6 @@ export function ContextProvider({ children }: ContextProviderProps) {
         })
     }
 
-    const [ cartItemsCount, setCartItemsCount ] = useState(0)
-
     const [ orderInfos, setOrderInfos ] = useState<FormInfosProps | null>({
         CEP: '',
         Rua: '',
@@ -194,8 +190,6 @@ export function ContextProvider({ children }: ContextProviderProps) {
 
         <Context.Provider value={{
             cartItems,
-            cartItemsCount,
-            setCartItemsCount,
             orderInfos,
             setOrderInfos,
             addOrderInfos,

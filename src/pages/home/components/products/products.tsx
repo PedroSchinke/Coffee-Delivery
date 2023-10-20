@@ -119,7 +119,7 @@ const products: CartItemType[] = [
 
 export function Products() {
 
-    const { cartItemsCount, cartItems } = useContext(Context)
+    const { cartItems } = useContext(Context)
 
     const totalPrice = cartItems?.reduce(
         (total, currentValue) => total = total + currentValue.price!, 0
@@ -153,7 +153,7 @@ export function Products() {
                     {totalPrice!.toLocaleString('pt-br', {
                         style: 'currency',
                         currency: 'BRL'
-                    })} / {cartItemsCount} itens
+                    })} / {cartItems.length} itens
                 </a>
 
                 <NavLink to='/checkout'>
