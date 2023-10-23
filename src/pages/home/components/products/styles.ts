@@ -30,6 +30,11 @@ export const ButtonAndShoppingCartContainer = styled.div`
     margin-bottom: 70px;
     gap: 20px;
 
+    @media (max-width: 450px) {
+        flex-direction: column;
+        width: 100%;
+    }
+
     a {
         text-decoration: none;
         width: 25%;
@@ -39,10 +44,22 @@ export const ButtonAndShoppingCartContainer = styled.div`
         @media (max-width: 768px) {
             width: 50%;
         }
+
+        @media (max-width: 450px) {
+            width: 100%;
+        }
+
+        .dot {
+            margin-left: -10px;
+        }
+
+        .itemsCount {
+            margin-left: -10px;
+        }
     }
 
     .shoppingcart {
-        width: 20%;
+        width: fit-content;
         color: ${props => props.theme['yellow-dark']};
         background: ${props => props.theme['yellow-light']};
         border-radius: 8px;
@@ -56,7 +73,10 @@ export const ButtonAndShoppingCartContainer = styled.div`
 
         @media (max-width: 768px) {
             width: 50%;
-            font-size: 0.9rem;
+        }
+
+        @media (max-width: 450px) {
+            width: 100%;
         }
     }
 

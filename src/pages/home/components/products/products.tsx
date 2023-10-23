@@ -17,6 +17,7 @@ import { CartItemType, Context } from "../../../../contexts/context";
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { ProductsList } from "../product/styles";
+import { PiDotOutlineFill } from 'react-icons/pi'
 
 const products: CartItemType[] = [
     {
@@ -153,7 +154,8 @@ export function Products() {
                     {totalPrice!.toLocaleString('pt-br', {
                         style: 'currency',
                         currency: 'BRL'
-                    })} / {cartItems.length} itens
+                    })} <PiDotOutlineFill className='dot' size={30}/> 
+                    <span className="itemsCount">{cartItems.length} itens</span>
                 </a>
 
                 <NavLink to='/checkout'>
