@@ -105,7 +105,7 @@ export const Price = styled.h3`
 `
 
 export const AddToCartButton = styled.button`
-    width: 4rem;
+    width: 3.6rem;
     height: 2.5rem;
     background: ${props => props.theme['purple-dark']};
     border: 0;
@@ -119,6 +119,7 @@ export const AddToCartButton = styled.button`
 
     @media (max-width: 768px) {
         width: 3.3rem;
+        height: 2.3rem;
     }
 
     &:hover {

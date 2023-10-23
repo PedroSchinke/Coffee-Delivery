@@ -1,4 +1,4 @@
-import { ShoppingCart } from "phosphor-react";
+import { Plus, ShoppingCart } from "phosphor-react";
 import { AddToCartButton, BarContainer, Price, ProductsList } from "../product/styles";
 import { Descrition, ProductName } from "../product/styles";
 import { FormEvent, useContext } from "react";
@@ -45,6 +45,7 @@ export function Product({ coffee }: CoffeeCardProps) {
 
                     <AddToCartButton onClick={handleAddToCart} title="Adicionar ao carrinho">
                         <ShoppingCart size={22} weight="fill"/>
+                        <Plus size={14} weight="bold"/>
                     </AddToCartButton>
 
                 </div>
