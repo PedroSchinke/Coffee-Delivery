@@ -15,9 +15,16 @@ export function Header() {
 
             <div>
                
-                <span className='location'> <a><MapPin size={26} weight='fill'/></a> Porto Alegre, RS</span>
+                <span className='location'> 
+                    <a><MapPin size={26} weight='fill'/></a>
+                    Porto Alegre, RS
+                </span>
+
                 <NavLink to='/history'>
-                    <HistoryButton title='Meus Pedidos'><Notepad size={26} /></HistoryButton>
+                    <HistoryButton title='Meus Pedidos'>
+                        <Notepad size={26} />
+                        <span className='myOrdersSpan'>Meus Pedidos</span>
+                    </HistoryButton>
                 </NavLink>
 
             </div>

@@ -57,10 +57,10 @@ export const HistoryButton = styled.span`
     border-radius: 8px;
     gap: 5px;
     padding: 8px 12px;
+    transition: 0.3s;
 
-    a {
-        display: flex;
-        align-items: center;
-        color: ${props => props.theme['yellow-dark']};
+    &:hover {
+        color: white;
+        background: ${props => props.theme['yellow-dark']};
     }
 `
