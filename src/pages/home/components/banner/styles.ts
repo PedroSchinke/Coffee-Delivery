@@ -19,6 +19,11 @@ export const BannerContainer = styled.div`
         flex-direction: column;
         gap: 60px;
 
+        @media (max-width: 1068px) {
+            width: 55%;
+            gap: 20px;
+        }
+
         @media (max-width: 768px) {
             width: 55%;
             gap: 20px;
@@ -26,10 +31,20 @@ export const BannerContainer = styled.div`
     }
 
     img {
-        width: 420px;
+        width: 380px;
+
+        @media (max-width: 1068px) {
+            width: 300px;
+            margin-bottom: 200px;
+        }
 
         @media (max-width: 768px) {
             width: 200px;
+            margin-bottom: 200px;
+        }
+
+        @media (max-width: 450px) {
+            width: 160px;
             margin-bottom: 200px;
         }
     }
@@ -46,6 +61,10 @@ export const TitleContainer = styled.div`
         font-size: 3rem;
         font-weight: 500;
         line-height: 1.2;
+
+        @media (max-width: 1068px) {
+            font-size: 2.3rem;
+        }
 
         @media (max-width: 768px) {
             font-size: 1.8rem;
@@ -78,6 +97,11 @@ export const ListContainer = styled(BaseList)`
     grid-template-columns: repeat(2, 1fr);
     list-style: none;
     row-gap: 18px;
+
+    @media (max-width: 1068px) {
+        width: 190%;
+        column-gap: 5px;
+    }
 
     @media (max-width: 768px) {
         width: 190%;
