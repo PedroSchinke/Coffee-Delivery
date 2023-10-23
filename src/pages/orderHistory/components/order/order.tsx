@@ -1,5 +1,5 @@
 import { CurrencyDollar } from "phosphor-react";
-import { Line, OrderContainer, OrderInfos, OrderItensContainer, OrderListItem, PaymentInfosContainer } from "./styles";
+import { Line, OrderContainer, OrderInfos, OrderItensContainer, OrderListItem, PaymentInfosContainer, ShippingRate } from "./styles";
 import { OrderType } from "../../../../contexts/context";
 
 export function Order({ orderItems, paymentPreference, totalPrice, date }: OrderType) {
@@ -34,6 +34,11 @@ export function Order({ orderItems, paymentPreference, totalPrice, date }: Order
                                 </OrderListItem>
                             )})
                         }
+
+                        <ShippingRate>
+                            <span className="shippingRateTitle">+ Frete</span>
+                            <span>R$ 3,50</span>
+                        </ShippingRate>
                     </ul>
 
                 </OrderItensContainer>
@@ -48,7 +53,7 @@ export function Order({ orderItems, paymentPreference, totalPrice, date }: Order
 
                         <span>{paymentPreference.payment_preference}</span>
                         <span className="orderPrice">
-                            {totalPrice?.toLocaleString('pt-br', {
+                            {(totalPrice! + 3.50).toLocaleString('pt-br', {
                                 style: 'currency',
                                 currency: 'BRL'
                             })}

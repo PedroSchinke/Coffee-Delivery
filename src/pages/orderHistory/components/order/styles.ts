@@ -52,6 +52,15 @@ export const OrderItensContainer = styled.div`
     }
 `
 
+export const ShippingRate = styled.div`
+    display: flex;
+    justify-content: space-between;
+
+    .shippingRateTitle {
+        margin-left: 8px;
+    }
+`
+
 export const OrderListItem = styled.li`
     display: flex;
     justify-content: space-between;
