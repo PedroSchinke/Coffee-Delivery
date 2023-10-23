@@ -41,13 +41,13 @@ export function Product({ coffee }: CoffeeCardProps) {
                     })}</Price>
                 </div>
 
-                <form>
+                <div>
 
                     <AddToCartButton onClick={handleAddToCart} title="Adicionar ao carrinho">
                         <ShoppingCart size={22} weight="fill"/>
                     </AddToCartButton>
 
-                </form>
+                </div>
 
                 </BarContainer>
 
