@@ -6,7 +6,7 @@
 
 <h2>Demonstração do Projeto</h2>
 
-<img src='./src/github/CoffeeDeliveryGIF.gif' alt='GIF'/>
+<img src='./src/github/demonstration.gif.gif' alt='GIF'/>
 
 <br>
 
