@@ -63,4 +63,10 @@ export const HistoryButton = styled.span`
         color: white;
         background: ${props => props.theme['yellow-dark']};
     }
+
+    .myOrdersSpan {
+        @media (max-width: 1068px) {
+            display: none;
+        }
+    }
 `
