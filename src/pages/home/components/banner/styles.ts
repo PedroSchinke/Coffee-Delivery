@@ -38,9 +38,15 @@ export const BannerContainer = styled.div`
             margin-bottom: 200px;
         }
 
+        @media (max-width: 888px) {
+            width: 250px;
+            margin-bottom: 200px;
+        }
+
         @media (max-width: 768px) {
             width: 200px;
-            margin-bottom: 200px;
+            margin-bottom: 90px;
+            margin-right: 50px;
         }
 
         @media (max-width: 450px) {
