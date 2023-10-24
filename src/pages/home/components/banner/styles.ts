@@ -74,8 +74,12 @@ export const TitleContainer = styled.div`
     h2 {
         font-family: 'Roboto', sans-serif;
         color: ${props => props.theme['base-subtitle']};
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         line-height: 1.6;
+
+        @media (max-width: 1068px) {
+            font-size: 1.1rem;
+        }
 
         @media (max-width: 768px) {
             font-size: 1.1rem;
